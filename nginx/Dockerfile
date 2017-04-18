@@ -1,4 +1,4 @@
-FROM nginx:stable
+FROM nginx:stable-alpine
 MAINTAINER Allen Zou <zyl_work@163.com>
 
 RUN apt update && apt install -y curl
