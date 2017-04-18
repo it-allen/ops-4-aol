@@ -1,0 +1,13 @@
+version: '2.0'
+services:
+    gateway:
+        build: .
+        container_name: gateway
+        ports:
+            - 80:80
+        volumes:
+            - ./:/test-cdn:ro
+            - ./:/prd-cdn:ro
+            - ./:/test-assets:ro
+            - ./:/prd-assets:ro
+        network_mode: host
