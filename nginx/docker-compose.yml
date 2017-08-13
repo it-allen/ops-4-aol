@@ -11,3 +11,4 @@ services:
             - ./:/test-assets:ro
             - ./:/prd-assets:ro
         network_mode: host
+        command: [nginx-debug, '-g', 'daemon off;']
